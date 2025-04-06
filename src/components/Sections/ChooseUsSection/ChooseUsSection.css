@@ -1,0 +1,204 @@
+section.Section-Why-Choose-US {
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    background: url('/images/Background/services.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 100px 5%;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+section.Section-Why-Choose-US div.Dev-Why-Choose-US {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+div h1.title-why-choose-us {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--secondary-color);
+    margin: 20px 0;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+div p.paragh-at-tds {
+    margin: 24px 0;
+    font-size: 1.2rem;
+    max-width: 800px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.cards-us {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+div.card-second-section {
+    padding: 25px;
+    border-radius: 16px;
+    width: 330px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-second-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+.card-second-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Poppins;
+}
+
+.card-second-section:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Icon Styling */
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1440px) {
+
+    div.card-second-section {
+        width: 300px;
+    }
+    div.card-second-section h3 {
+        font-size: 16px;
+    }
+    div.card-second-section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    div h1.title-why-choose-us {
+        font-size: 3rem;
+    }
+
+    div p.paragh-at-tds {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 1024px) {
+    div h1.title-why-choose-us {
+        font-size: 2.5rem;
+    }
+
+    div p.paragh-at-tds {
+        font-size: 0.95rem;
+    }
+
+    .cards-us {
+        gap: 24px;
+    }
+
+    div.card-second-section {
+        width: 280px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.Section-Why-Choose-US {
+        padding: 60px 20px;
+    }
+
+    div h1.title-why-choose-us {
+        font-size: 2rem;
+    }
+
+    div p.paragh-at-tds {
+        font-size: 0.875rem;
+    }
+
+    .cards-us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.card-second-section {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    div h1.title-why-choose-us {
+        font-size: 1.5rem;
+    }
+
+    div p.paragh-at-tds {
+        font-size: 0.8rem;
+    }
+
+    div.card-second-section {
+        width: 100%;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,184 @@
+.heroSection {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    position: relative;
+    /* Required for pseudo-element */
+    overflow: hidden;
+    /* Ensures the effect doesn't overflow */
+}
+
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/Background/contact.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contentHero {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.vector img {
+    width: 780px;
+    height: 557px;
+    margin-left: 10%;
+    user-select: none;
+    pointer-events: none;
+}
+
+.welcome-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: transparent;
+    font-family: Poppins;
+    background: linear-gradient(270deg, #f1f5f4, #ffffff, #ffffff);
+    background-size: 300%;
+    padding: 5px 0px;
+    border-radius: 50px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient-animation 3s linear infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.text-content h1 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.25;
+    color: transparent;
+    background: linear-gradient(250deg, #CAFFF7, #12F7D6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 22px;
+    font-style: inherit;
+    font-family: Poppins;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+
+div .welcome-text {
+    margin-bottom: 28px;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--white-text);
+    font-family: Poppins;
+
+}
+
+.content-wrapper a {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.continue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background: var(--button-color);
+    color: var(--button-text);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.continue-btn:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.continue-btn svg circle {
+    transition: stroke 0.3s ease;
+}
+
+.continue-btn.animate {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Move to original position */
+}
+
+.continue-btn>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.continue-btn:hover svg {
+    transform: translateX(5px);
+}
+
+.continue-btn:active {
+    transform: scale(0.95);
+}
+
+
+
+
+@media (max-width: 1600px){
+    
+    .text-content h1 {
+        font-size: 35px;
+    }
+
+    .welcome-title {
+        font-size: 18px;
+    }
+    
+    .description {
+        font-size: 15px;
+        font-weight: 300;
+    }
+    
+    .continue-btn {
+        gap: 12px;
+        padding: 8px 18px;
+        border-radius: 15px;
+        font-size: 1rem;
+    }
+
+    .continue-btn>svg {
+        width: 28px;
+    }
+
+    .vector img {
+        width: 630px;
+        height: 427px;
+    }
+}

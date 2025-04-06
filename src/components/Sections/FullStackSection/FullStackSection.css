@@ -1,0 +1,182 @@
+.our-services {
+    width: 100vw;
+    height: 100vh;
+    background: url('/images/Background/process.png') no-repeat center;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.our-services.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.our-services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.our-services.active h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.our-services .description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+
+.our-services.active .description {
+    opacity: 1;
+    transform: translateY(0);
+    font-weight: 400;
+}
+
+.our-services .icons {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
+}
+
+.our-services.active .icons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.our-services .icons img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.our-services .icons img:hover {
+    transform: scale(1.1);
+}
+
+.our-services a {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #01000f;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    transition: transform 0.9s ease;
+}
+
+.our-services a:hover {
+    background: #000e03;
+}
+
+.our-services .text {
+    color: #fff;
+}
+
+.our-services a > svg {
+    width: 40px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.our-services a:hover svg {
+    transform: translateX(5px);
+}
+
+.our-services a:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 1920px) {
+    .our-services h2 {
+        font-size: 2.5rem;
+    }
+    .our-services .description {
+        font-size: 1.3rem;
+    }
+    .our-services .icons img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .our-services h2 {
+        font-size: 2rem;
+    }
+    .our-services .description {
+        font-size: 1rem;
+    }
+    .our-services .icons img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .our-services h2 {
+        font-size: 2rem;
+    }
+    .our-services .description {
+        font-size: 1rem;
+    }
+    .our-services .icons img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-services h2 {
+        font-size: 1.8rem;
+    }
+    .our-services .description {
+        font-size: 0.95rem;
+    }
+    .our-services .icons img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-services {
+        padding: 30px 15px;
+    }
+    .our-services h2 {
+        font-size: 1.6rem;
+    }
+    .our-services .description {
+        font-size: 0.9rem;
+    }
+    .our-services .icons img {
+        width: 150px;
+    }
+}

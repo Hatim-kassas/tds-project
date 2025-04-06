@@ -1,0 +1,81 @@
+.additional-info-slogan {
+    position: relative;
+    background: linear-gradient(to left, #038774, #00FFDA 50%, #038774);
+    padding: 30px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.info-content-slogan.left-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.info-content-slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.additional-info-slogan h3 {
+    font-size: 34px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.additional-info-slogan::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Position slightly below the section */
+    left: 0;
+    width: 150px; /* Initial size of the glowing line */
+    height: 5px;
+    background: linear-gradient(to right, rgba(0, 255, 218, 0.8), rgba(3, 135, 116, 0.8));
+    box-shadow: 0 0 10px #00FFDA, 0 0 20px #038774;
+    border-radius: 5px;
+    animation: moveGlow 4s linear infinite;
+}
+
+/* Keyframes for left-right movement */
+@keyframes moveGlow {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 150px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+
+.know-more-button {
+    background: var(--secondary-button);
+    color: var(--button-text);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.know-more-button:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+}

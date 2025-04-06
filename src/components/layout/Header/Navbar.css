@@ -1,0 +1,127 @@
+/* Add to your index.css */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px;
+    background: transparent;
+    transition: background 0.4s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container.scrolled {
+    background: var(--bg-color);
+}
+
+.logo img {
+    height: 35px;
+    margin-left: 50px;
+}
+
+.navbar {
+    flex: 1;
+    margin: 0 30px;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--white-text);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: var(--button-color);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white-text);
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-link {
+    color: var(--text-color);
+    padding: 12px 16px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background-color: #f4f4f4;
+    color: var(--green-color);
+}
+
+.meet-btn {
+    background: var(--button-color);
+    color: var(--button-text);
+    padding: 10px 25px;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.meet-btn:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 1600px) {
+    .logo img {
+        height: 28px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .dropdown-link {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .meet-btn {
+        padding: 8px 20px;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}

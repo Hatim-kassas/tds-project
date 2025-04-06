@@ -1,0 +1,141 @@
+/* Empowering Section - Modern and Beautiful */
+.empowering-section {
+    background-image: url('/assets/images/Background/process.png');
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.empowering-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.content-container {
+    max-width: 1400px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 100px 120px;
+    position: relative;
+    z-index: 2;
+}
+
+.empowering-section h3 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #00594C, #009882);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.empowering-section p {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #363636;
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.cta-container {
+    background-image: url('/images/Background/Get your project estimation just in a few clicks_ gradient.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    color: #ffffff;
+    border-radius: 30px;
+    max-width: 100%;
+    margin-top: 90px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cta-container p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 48px;
+    font-weight: 800;
+    max-width: 570px;
+    margin: 0;
+    line-height: 1.3;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content-container {
+        padding: 80px 60px;
+    }
+    
+    .empowering-section h3 {
+        font-size: 48px;
+    }
+    
+    .empowering-section p {
+        font-size: 20px;
+    }
+    
+    .cta-container p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 60px 30px;
+    }
+    
+    .empowering-section h3 {
+        font-size: 36px;
+    }
+    
+    .empowering-section p {
+        font-size: 18px;
+    }
+    
+    .cta-container {
+        padding: 40px;
+        margin-top: 60px;
+    }
+    
+    .cta-container p {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: 40px 20px;
+    }
+    
+    .empowering-section h3 {
+        font-size: 28px;
+    }
+    
+    .empowering-section p {
+        font-size: 16px;
+    }
+    
+    .cta-container {
+        padding: 30px;
+        margin-top: 40px;
+    }
+    
+    .cta-container p {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,205 @@
+.our-process {
+    width: 100vw;
+    min-height: 100vh;
+    background: url('/images/Background/process.png') no-repeat center;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-process h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+    z-index: 1;
+}
+
+.process-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.step {
+    width: 220px;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.step.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(233, 233, 233, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 auto 15px;
+    color: #292929;
+}
+
+.step h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: #12F7D6;
+}
+
+/* 1920px and larger screens */
+@media (min-width: 1920px) {
+    .our-process {
+        padding: 80px 30px;
+    }
+
+    .our-process h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .process-steps {
+        gap: 30px;
+    }
+
+    .step {
+        width: 260px;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 1.8rem;
+    }
+
+    .step h3 {
+        font-size: 1.25rem;
+    }
+
+    .step p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets and small desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .our-process {
+        padding: 40px 15px;
+    }
+
+    .our-process h2 {
+        font-size: 1.8rem;
+    }
+
+    .process-steps {
+        gap: 15px;
+    }
+
+    .step {
+        width: 180px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        font-size: 1.4rem;
+    }
+
+    .step h3 {
+        font-size: 1rem;
+    }
+
+    .step p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile devices (768px and below) */
+@media (max-width: 768px) {
+    .our-process {
+        padding: 30px 10px;
+    }
+
+    .our-process h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .process-steps {
+        flex-direction: column;
+    }
+
+    .step {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .step h3 {
+        font-size: 0.95rem;
+    }
+
+    .step p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .our-process h2 {
+        font-size: 1.4rem;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .step h3 {
+        font-size: 0.85rem;
+    }
+
+    .step p {
+        font-size: 0.75rem;
+    }
+}
