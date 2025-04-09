@@ -10,7 +10,8 @@ export default function FullStackSection() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Add any code you want to execute when the element is visible
+            // Add active class when element is visible
+            node.classList.add('active');
           }
         });
       }, {

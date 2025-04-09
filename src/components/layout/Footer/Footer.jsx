@@ -37,7 +37,7 @@ export default function Footer() {
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-btn">
               <img src="/images/social/insta.png" width="24" height="24" alt="Instagram" />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-btn">
+            <a href="https://www.linkedin.com/company/triaddevs" target="_blank" rel="noopener noreferrer" className="social-btn">
               <img src="/images/social/in.png" width="24" height="24" alt="LinkedIn" />
             </a>
           </div>

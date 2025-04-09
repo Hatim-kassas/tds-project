@@ -15,7 +15,7 @@ export default function SloganSection({
       <div className={`info-content-slogan ${showButton ? 'left-button' : ''}`}>
         <h3>{title}</h3>
         {showButton ? (
-            <Link to={buttonLink} class="know-more-button">{buttonText}</Link>
+            <Link to={buttonLink} target='_blank' class="know-more-button">{buttonText}</Link>
           ) : (
             null
           )

@@ -45,16 +45,16 @@ export default function App() {
       <Routes>
         {/* Home Route */}
         <Route path="/" element={<Home />} />
-        
+
         {/* Full-Stack Routes */}
         <Route path="/Web_Development" element={<WebDevelopment />} />
         <Route path="/Mobile_Development" element={<MobileDevelopment />} />
-        
+
         {/* Our Services Routes */}
         <Route path="/Secure_Coding" element={<SecureCoding />} />
         <Route path="/AI_Integration" element={<AIIntegration />} />
         <Route path="/Cloud_Solutions" element={<CloudSolutions />} />
-        
+
         {/* Cloud Hosting Routes */}
         <Route path="/Cloud_Migration" element={<CloudMigration />} />
         <Route path="/SSL_Certificates" element={<SSLCertificates />} />
