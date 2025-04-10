@@ -14,13 +14,10 @@ export default function SloganSection({
     <section className="additional-info-slogan">
       <div className={`info-content-slogan ${showButton ? 'left-button' : ''}`}>
         <h3>{title}</h3>
-        {showButton ? (
-            <Link to={buttonLink} target='_blank' class="know-more-button">{buttonText}</Link>
-          ) : (
-            null
+        {showButton && (
+            <Link to={buttonLink} target='_blank' className="know-more-button">{buttonText}</Link>
           )
         }
-        
       </div>
     </section>
   )

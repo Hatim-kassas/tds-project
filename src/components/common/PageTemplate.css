@@ -4,11 +4,12 @@
     /* Adjust based on your navbar height */
 }
 
+/* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(26, 30, 35, 0.9), rgba(26, 30, 35, 0.8)), url('/images/Background/why_choose_us_p.png');
     background-size: cover;
     background-position: center;
-    padding: 120px 0;
+    padding: 150px 0;
     text-align: center;
     position: relative;
 }
@@ -39,6 +40,7 @@
     background-clip: text;
     color: transparent;
     display: inline-block;
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero-description {
@@ -46,6 +48,7 @@
     margin-bottom: 30px;
     line-height: 1.6;
     color: var(--white-text);
+    animation: fadeInUp 1s ease-out;
 }
 
 .cta-button {
@@ -55,8 +58,15 @@
     border-radius: 30px;
     font-weight: 600;
     font-size: 1rem;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.btn-icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
 }
 
 .cta-button:hover {
@@ -65,29 +75,38 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.features-section {
-    padding: 80px 20px;
+.cta-button:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* Section Styles */
+.features-section,
+.tech-stack-section,
+.process-section,
+.testimonials-section,
+.template-faq-section {
+    padding: 100px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.features-section h2 {
+.section-subtitle {
     text-align: center;
-    margin-bottom: 60px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
     font-size: 2.5rem;
     color: var(--white-text);
     position: relative;
 }
 
-.features-section h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin: 15px auto 0;
-}
-
+/* Features Section */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,9 +145,98 @@
     line-height: 1.6;
 }
 
+/* Tech Stack Section */
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.tech-name {
+    color: var(--white-text);
+    font-weight: 500;
+}
+
+/* Process Section */
+.process-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 60px auto 0;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background-color: var(--secondary-color);
+}
+
+.process-step {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-text);
+    font-weight: bold;
+    margin-right: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-content h3 {
+    color: var(--white-text);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.step-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Benefits Section */
 .benefits-section {
     background-color: var(--green-color);
-    padding: 80px 20px;
+    padding: 100px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -148,17 +256,15 @@
     margin: 0 auto;
 }
 
-.benefits-section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: var(--white-text);
+.benefits-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .benefits-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
+    margin-top: 50px;
 }
 
 .benefits-list li {
@@ -169,22 +275,216 @@
 }
 
 .benefit-check {
-    color: var(--secondary-color);
+    color: var(--white-text);
     font-size: 1.25rem;
     margin-right: 15px;
     font-weight: bold;
 }
 
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.testimonial-quote {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.4;
+    line-height: 1;
+}
+
+.testimonial-text {
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    color: var(--white-text);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.author-position {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* FAQ Section */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-item:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.faq-question {
+    color: var(--white-text);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.faq-question::before {
+    content: 'Q:';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.faq-answer {
+    color: #ccc;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px;
+}
+
+.faq-answer::before {
+    content: 'A:';
+    position: absolute;
+    left: 0;
+    color: var(--hover-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    color: var(--white-text);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.cta-section p {
+    color: #ccc;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
 
-    .features-grid {
+    .features-grid,
+    .benefits-list,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
-    .benefits-list {
+    .faq-grid {
         grid-template-columns: 1fr;
+    }
+
+    .process-timeline::before {
+        left: 20px;
+    }
+
+    .process-step {
+        flex-direction: column;
+    }
+
+    .step-number {
+        margin-bottom: 15px;
+    }
+
+    .tech-stack-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

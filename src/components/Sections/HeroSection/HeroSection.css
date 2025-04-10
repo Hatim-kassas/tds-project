@@ -6,9 +6,7 @@
     justify-content: center;
     background-attachment: fixed;
     position: relative;
-    /* Required for pseudo-element */
     overflow: hidden;
-    /* Ensures the effect doesn't overflow */
 }
 
 .heroSection::before {
@@ -32,8 +30,12 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 0 20px;
 }
 
+.text-content {
+    z-index: 1;
+}
 
 .vector img {
     width: 780px;
@@ -41,6 +43,7 @@
     margin-left: 10%;
     user-select: none;
     pointer-events: none;
+    z-index: 1;
 }
 
 .welcome-title {
@@ -84,7 +87,6 @@
     vertical-align: bottom;
 }
 
-
 div .welcome-text {
     margin-bottom: 28px;
 }
@@ -94,7 +96,6 @@ div .welcome-text {
     font-weight: 300;
     color: var(--white-text);
     font-family: Poppins;
-
 }
 
 .content-wrapper a {
@@ -116,6 +117,7 @@ div .welcome-text {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .continue-btn:hover {
@@ -129,9 +131,7 @@ div .welcome-text {
 
 .continue-btn.animate {
     opacity: 1;
-    /* Fade in */
     transform: translateY(0);
-    /* Move to original position */
 }
 
 .continue-btn>svg {
@@ -148,11 +148,8 @@ div .welcome-text {
     transform: scale(0.95);
 }
 
-
-
-
-@media (max-width: 1600px){
-    
+/* Large Desktops (1200px - 1600px) */
+@media (max-width: 1600px) {
     .text-content h1 {
         font-size: 35px;
     }
@@ -180,5 +177,151 @@ div .welcome-text {
     .vector img {
         width: 630px;
         height: 427px;
+    }
+}
+
+/* Desktop (992px - 1199px) */
+@media (max-width: 1199px) {
+    .text-content h1 {
+        font-size: 32px;
+    }
+
+    .welcome-title {
+        font-size: 16px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .vector img {
+        width: 500px;
+        height: 350px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+    .contentHero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 80px; /* Space for navbar */
+    }
+    
+    .text-content {
+        margin-top: 20px;
+    }
+    
+    .text-content h1 {
+        font-size: 28px;
+        white-space: normal;
+        display: block;
+    }
+    
+    .welcome-title {
+        display: inline-block;
+    }
+    
+    .vector img {
+        width: 400px;
+        height: 280px;
+        margin-left: 0;
+    }
+    
+    .welcome-text {
+        max-width: 90%;
+        margin: 0 auto 20px;
+    }
+    
+    .continue-btn {
+        margin: 0 auto;
+    }
+}
+
+/* Mobile (576px - 767px) */
+@media (max-width: 767px) {
+    .heroSection {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .contentHero {
+        padding: 100px 15px 50px;
+    }
+    
+    .text-content h1 {
+        font-size: 24px;
+    }
+    
+    .welcome-title {
+        font-size: 14px;
+    }
+    
+    .description {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    
+    .vector img {
+        width: 300px;
+        height: 210px;
+    }
+    
+    .continue-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .continue-btn>svg {
+        width: 24px;
+    }
+}
+
+/* Small Mobile (below 576px) */
+@media (max-width: 575px) {
+    .heroSection::before {
+        background-attachment: scroll; /* Fix for mobile devices */
+    }
+    
+    .text-content h1 {
+        font-size: 22px;
+    }
+    
+    .welcome-title {
+        font-size: 12px;
+    }
+    
+    .vector img {
+        width: 240px;
+        height: 170px;
+    }
+    
+    .description {
+        font-size: 11px;
+    }
+    
+    .continue-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .continue-btn>svg {
+        width: 20px;
+    }
+}
+
+/* Extra Small Mobile (below 400px) */
+@media (max-width: 399px) {
+    .contentHero {
+        padding: 80px 10px 40px;
+    }
+    
+    .text-content h1 {
+        font-size: 20px;
+    }
+    
+    .vector img {
+        width: 200px;
+        height: 140px;
     }
 }

@@ -1,336 +1,341 @@
 .cloud-section {
-    background: rgb(3,135,116);
-    background: linear-gradient(90deg, rgba(3,135,116,1) 0%, rgba(0,255,218,1) 50%, rgba(3,135,116,1) 100%);
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
-    padding: 2rem;
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-  }
+  background: rgb(3, 135, 116);
+  background: linear-gradient(90deg, rgba(3, 135, 116, 1) 0%, rgba(0, 255, 218, 1) 50%, rgba(3, 135, 116, 1) 100%);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
 
-  .cloud-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.05;
-    z-index: -1;
-  }
+.cloud-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  z-index: -1;
+}
 
-  .cloud-content {
-    max-width: 1920px;
-    background-image: url('/images/Background/cloud.png');
-    color: #f0f0f0;
-    padding: 3rem;
-    border-radius: 30px;
-    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.61);
-    background-size: cover;
-    background-position: 0% 50%;
-  }
+.cloud-content {
+  max-width: 1920px;
+  background-image: url('/images/Background/cloud.png');
+  color: #f0f0f0;
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.61);
+  background-size: cover;
+  background-position: 0% 50%;
+}
 
 
 .notification {
-    display: flex;
-    align-items: center;
-    background-color: #00ffd918;
-    border: 2px solid #93ff9818;
-    padding: 10px 20px;
-    border-radius: 25px;
-    color: #64f4c4;
-    font-size: 16px;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  background-color: #00ffd918;
+  border: 2px solid #93ff9818;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #64f4c4;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    stroke: #64f4c4; /* Match the text color */
-    transition: transform 0.3s ease-in-out;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  stroke: #64f4c4;
+  /* Match the text color */
+  transition: transform 0.3s ease-in-out;
 }
 
 .icon:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .cloud-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    animation: fadeIn 1.5s ease-in-out;
-    background: linear-gradient(90deg, #00ffda, #038774);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.5s ease-in-out;
+  background: linear-gradient(90deg, #00ffda, #038774);
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for non-webkit browsers */
 }
 
-  .cloud-content p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    animation: fadeIn 2s ease-in-out;
-  }
+.cloud-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
 
-  .cloud-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2.5rem;
-    animation: fadeInUp 2.5s ease-in-out;
-  }
+.cloud-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  animation: fadeInUp 2.5s ease-in-out;
+}
 
-  .boton-elegante {
-    padding: 15px 30px;
-    border: 2px solid #2c2c2c;
-    background-color: #0d1117;
-    color: #ffffff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: all 0.4s ease;
-    outline: none;
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    margin-top: 2rem; /* Adjusted for proper spacing */
-  }
+.boton-elegante {
+  padding: 15px 30px;
+  border: 2px solid #2c2c2c;
+  background-color: #0d1117;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+  /* Adjusted for proper spacing */
+}
 
-  .boton-elegante::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-      circle,
+/* .boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle,
       rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0) 70%
-    );
-    transform: scale(0);
-    transition: transform 0.5s ease;
+      rgba(255, 255, 255, 0) 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+} */
+
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #0d1117;
+}
+
+.cloud-icons {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 3s ease-in-out;
+}
+
+.cloud-icons .icon-wrapper {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cloud-icons .icon-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.cloud-icons img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.cloud-icons .icon-wrapper:hover img {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
 
-  .boton-elegante:hover::after {
-    transform: scale(4);
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
 
-  .boton-elegante:hover {
-    border-color: #666666;
-    background: #0d1117;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-  .cloud-icons {
-    display: flex;
-    justify-content: left;
-    gap: 2rem;
-    margin-top: 3rem;
-    animation: fadeInUp 3s ease-in-out;
-  }
-
-  .cloud-icons .icon-wrapper {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .cloud-icons .icon-wrapper:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-  }
-
-  .cloud-icons img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-
-  .cloud-icons .icon-wrapper:hover img {
-    transform: scale(1.2);
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}
 
 
 /* Responsive Design for Cloud Section */
 @media (max-width: 1200px) {
-    .cloud-content {
-        padding: 2rem;
-    }
+  .cloud-content {
+    padding: 2rem;
+  }
 
-    .cloud-content h1 {
-        font-size: 3rem;
-    }
+  .cloud-content h1 {
+    font-size: 3rem;
+  }
 
-    .cloud-content p {
-        font-size: 1.3rem;
-    }
+  .cloud-content p {
+    font-size: 1.3rem;
+  }
 
-    .boton-elegante {
-        font-size: 1.1rem;
-        padding: 12px 25px;
-    }
+  .boton-elegante {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
 
-    .cloud-icons .icon-wrapper {
-        width: 90px;
-        height: 90px;
-    }
+  .cloud-icons .icon-wrapper {
+    width: 90px;
+    height: 90px;
+  }
 
-    .cloud-icons img {
-        width: 50px;
-        height: 50px;
-    }
+  .cloud-icons img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 992px) {
-    .cloud-section {
-        min-height: 50vh;
-        padding: 1.5rem;
-    }
+  .cloud-section {
+    min-height: 50vh;
+    padding: 1.5rem;
+  }
 
-    .cloud-content {
-        padding: 1.5rem;
-    }
+  .cloud-content {
+    padding: 1.5rem;
+  }
 
-    .cloud-content h1 {
-        font-size: 2.5rem;
-    }
+  .cloud-content h1 {
+    font-size: 2.5rem;
+  }
 
-    .cloud-content p {
-        font-size: 1.2rem;
-    }
+  .cloud-content p {
+    font-size: 1.2rem;
+  }
 
-    .boton-elegante {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
+  .boton-elegante {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 
-    .cloud-icons {
-        gap: 1.5rem;
-    }
+  .cloud-icons {
+    gap: 1.5rem;
+  }
 
-    .cloud-icons .icon-wrapper {
-        width: 80px;
-        height: 80px;
-    }
+  .cloud-icons .icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
 
-    .cloud-icons img {
-        width: 45px;
-        height: 45px;
-    }
+  .cloud-icons img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media (max-width: 768px) {
-    .cloud-section {
-        min-height: 40vh;
-        padding: 1rem;
-    }
+  .cloud-section {
+    min-height: 40vh;
+    padding: 1rem;
+  }
 
-    .cloud-content {
-        padding: 1rem;
-        text-align: center;
-    }
+  .cloud-content {
+    padding: 1rem;
+    text-align: center;
+  }
 
-    .cloud-content h1 {
-        font-size: 2rem;
-    }
+  .cloud-content h1 {
+    font-size: 2rem;
+  }
 
-    .cloud-content p {
-        font-size: 1rem;
-    }
+  .cloud-content p {
+    font-size: 1rem;
+  }
 
-    .cloud-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .cloud-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .boton-elegante {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
+  .boton-elegante {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 
-    .cloud-icons {
-        justify-content: center;
-        gap: 1rem;
-    }
+  .cloud-icons {
+    justify-content: center;
+    gap: 1rem;
+  }
 
-    .cloud-icons .icon-wrapper {
-        width: 70px;
-        height: 70px;
-    }
+  .cloud-icons .icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
 
-    .cloud-icons img {
-        width: 40px;
-        height: 40px;
-    }
+  .cloud-icons img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-    .cloud-section {
-        min-height: 30vh;
-        padding: 0.5rem;
-    }
+  .cloud-section {
+    min-height: 30vh;
+    padding: 0.5rem;
+  }
 
-    .cloud-content {
-        padding: 0.5rem;
-    }
+  .cloud-content {
+    padding: 0.5rem;
+  }
 
-    .cloud-content h1 {
-        font-size: 1.8rem;
-    }
+  .cloud-content h1 {
+    font-size: 1.8rem;
+  }
 
-    .cloud-content p {
-        font-size: 0.9rem;
-    }
+  .cloud-content p {
+    font-size: 0.9rem;
+  }
 
-    .boton-elegante {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
+  .boton-elegante {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
 
-    .cloud-icons {
-        gap: 0.8rem;
-    }
+  .cloud-icons {
+    gap: 0.8rem;
+  }
 
-    .cloud-icons .icon-wrapper {
-        width: 60px;
-        height: 60px;
-    }
+  .cloud-icons .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
 
-    .cloud-icons img {
-        width: 35px;
-        height: 35px;
-    }
+  .cloud-icons img {
+    width: 35px;
+    height: 35px;
+  }
 }

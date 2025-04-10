@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './CloudSection.css'
 
 export default function CloudSection() {
@@ -65,7 +66,9 @@ export default function CloudSection() {
                     </div>
                 </div>
 
-                <button className="boton-elegante">Explore</button>
+                <Link to="/Cloud_Solutions" className="boton-elegante">
+                    Explore
+                </Link>
             </div>
         </section>
     )
